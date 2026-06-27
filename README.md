@@ -57,6 +57,13 @@ precipitation-forecasting-cuba/
     ├── gcrnn/
     ├── masked_lstm/
     └── partially_masked_lstm/
+
+## Installation
+
+Clone the repository and install the required packages:
+
+```bash
+pip install -r requirements.txt
 ```
 
 ---
