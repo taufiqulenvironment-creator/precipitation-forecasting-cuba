@@ -2,33 +2,45 @@
 
 ## Overview
 
-This repository presents my master's research on daily precipitation forecasting in Cuba using graph-based deep learning and LSTM models.
+This repository contains my master's research project on daily precipitation forecasting in Cuba using Graph Neural Networks and Long Short-Term Memory (LSTM) models.
 
-The project compares three models:
+The objective of this work is to investigate how incorporating spatial relationships between weather stations improves precipitation prediction compared with conventional temporal deep learning models.
 
-- Graph Convolutional Recurrent Neural Network (GCRNN)
-- Partially Masked LSTM
-- Masked LSTM
+Three deep learning models are evaluated:
 
-The goal was to evaluate how well these models predict precipitation at held-out test nodes using NOAA CPC Unified daily precipitation observations.
+* Graph Convolutional Recurrent Neural Network (GCRNN)
+* Partially Masked LSTM
+* Masked LSTM
+
+Model performance is evaluated using eight held-out test nodes from NOAA CPC Unified daily precipitation observations.
+
+---
 
 ## Dataset
 
-- Source: NOAA CPC Unified Daily Precipitation
-- Study area: Cuba
-- Time period: 1979–2023
-- Evaluation focus: eight held-out test nodes
+* **Source:** NOAA CPC Unified Daily Precipitation Dataset
+* **Study Area:** Cuba
+* **Time Period:** 1979–2023
+* **Prediction Horizon:** Daily precipitation forecasting
+* **Evaluation:** Eight unseen (held-out) test nodes
+
+---
 
 ## Models
 
 ### GCRNN
-Graph-based model designed to capture both temporal rainfall patterns and spatial relationships between nodes.
+
+A Graph Convolutional Recurrent Neural Network designed to capture both temporal rainfall dynamics and spatial relationships among neighboring locations.
 
 ### Partially Masked LSTM
-LSTM model using partial spatial/neighborhood information.
+
+An LSTM model that incorporates limited neighborhood information together with temporal observations.
 
 ### Masked LSTM
-Baseline LSTM model using temporal information only.
+
+A baseline LSTM model that relies only on temporal information without explicit spatial connectivity.
+
+---
 
 ## Repository Structure
 
@@ -40,7 +52,56 @@ precipitation-forecasting-cuba/
 ├── Masked LSTM-Partially Masked LSTM-GCRNN.ipynb
 ├── Cuba_Precipitation_with_Nodes 3(in).csv
 ├── cuba_node_edges.csv
+│
 └── figures/
     ├── gcrnn/
     ├── masked_lstm/
     └── partially_masked_lstm/
+```
+
+---
+
+## Figures
+
+The **figures** directory contains representative prediction results for the eight held-out test nodes.
+
+Each model includes:
+
+* Timeline prediction plots
+* Test scatter plots
+* Comparison of observed versus predicted precipitation
+
+---
+
+## Requirements
+
+Install the required Python packages using:
+
+```bash
+pip install -r requirements.txt
+```
+
+---
+
+## Main Python Libraries
+
+* NumPy
+* Pandas
+* Matplotlib
+* SciPy
+* NetworkX
+* PyTorch
+* TensorFlow
+* Scikit-learn
+* Optuna
+* Jupyter Notebook
+
+---
+
+## Author
+
+**Taufiqul Islam**
+
+M.S. Earth & Environmental Sciences
+
+The University of Texas at Arlington
