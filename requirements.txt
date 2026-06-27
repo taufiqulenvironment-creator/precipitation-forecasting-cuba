@@ -1,0 +1,10 @@
+numpy
+pandas
+matplotlib
+scipy
+networkx
+torch
+tensorflow
+scikit-learn
+optuna
+jupyter
